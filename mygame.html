@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guessing Game</title>
+</head>
+
+<body>
+
+    <script>
+
+        let num = prompt('Guess a number between 0 and 10!')
+        if (isNaN(num)) {
+            alert('Guess a number between 0 and 10')
+        }
+        //prompt the user to type a number
+
+        function myRandomNumber() {
+            let x = Math.floor((Math.random() * 10) + 1)
+            return x
+        }
+        const randomNumber = myRandomNumber()
+        console.log(randomNumber)
+
+        while (num != randomNumber) {
+
+            if (num > randomNumber) {
+                alert('Your number is too large')
+                num = prompt('Guess a number between 0 and 10!')
+
+            }
+
+            else if (num < randomNumber) {
+                alert('Your number is too small')
+                num = prompt('Guess a number between 0 and 10!')
+            }
+        }
+        if (num == randomNumber) {
+            alert('Your number is correct answer!')
+        }
+
+        //while loop to keep taking the input and checking conditions over and over again *
+//while (i=0, i < everything.length, i++)
+
+
+
+            //generate random number between 0-10
+            //if number is greater than random alert...
+
+            //while (num != randomNumber)
+
+    </script>
+
+</body>
+
+</html>
